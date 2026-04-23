@@ -18,6 +18,7 @@ main {
 section{
     display: block;
     unicode-bidi: isolate;
+    margin: 9vh 0;
 }
 
 /* first section */
@@ -25,14 +26,13 @@ section{
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    margin: 9vh 0;
+    padding: 0 10vw;
     color: var(--text-color);
     row-gap: 2rem;
     height: auto;
 }
 .text-container{
     display: inherit;
-    margin: 0 10vw;
     row-gap: 0.8rem;
     
 }
@@ -43,12 +43,31 @@ h1{
     line-height: 1.4rem;
 }
 .photo-container img{
-    max-width: 290px;
-    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #22cfab99;
     border-radius: 20px;
 }
 /* second section */
-
+#proyects{
+    display: block;
+    padding: 0 10vw;
+    color: var(--text-color);
+}
+#proyects h2{
+    font-size: 1.8rem;
+    
+}
+.proyect-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+.proyect-container {
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid #e21313;
+}
 
 /* footer's styles */
 footer {

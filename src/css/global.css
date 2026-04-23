@@ -33,7 +33,10 @@ header {
     background-color: rgba(18, 18, 18, 0.08);
     backdrop-filter: blur(10px);
 }
-
+img{
+    max-width: 100%;
+    height: auto;
+}
 
 /* Styles for mobile devices */
 @media (max-width: 768px){
@@ -69,8 +72,8 @@ header {
         display: flex;
         flex-direction: column;
         border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(50px);
+        background-color: rgba( 7, 15, 33, 0.9 );
+        border: 1px solid var(--pale-green);
     }
     #nav-menu a {
         text-decoration: none;
@@ -126,7 +129,7 @@ header {
         padding: 0 1rem;
         margin-right: 7rem;
         border-radius: 40px;
-        box-shadow: 0 0 8px #22cfab99;
+        box-shadow: 0 0 8px var(--pale-green);
         align-self: center;
     }
     #nav-menu a {
