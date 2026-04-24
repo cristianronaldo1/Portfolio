@@ -17,8 +17,10 @@ html {
 }
 
 body {
-    display: block;
+    display: flex;
+    flex-flow: column;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* styles for the header */
@@ -32,6 +34,7 @@ header {
     background-color: rgba(18, 18, 18, 0.08);
     backdrop-filter: blur(10px);
     z-index: 1;
+    font-family: "ubuntu";
 }
 h1, h2{
     font-family: "Oswald";
@@ -43,6 +46,20 @@ p,label,input{
 img{
     max-width: 100%;
     height: auto;
+}
+main {
+    display: block; 
+}
+/* footer's styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-color);
+
 }
 
 /* Styles for mobile devices */
@@ -148,4 +165,10 @@ img{
         display: none;
     }
     
+}
+
+@media (min-width: 1200px) {
+    footer p{
+    font-size: 0.8rem;
+    }
 }

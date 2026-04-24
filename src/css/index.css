@@ -1,14 +1,6 @@
 @import url('/src/css/global.css');
 
-body {
-    display: flex;
-    flex-flow: column;
-}
 
-
-main {
-    display: block; 
-}
 section{
     display: block;
     unicode-bidi: isolate;
@@ -28,12 +20,10 @@ section{
 }
 .text-container{
     display: inherit;
-    /* row-gap: 0.8rem; */
     
 }
 h1{
     font-size: 2rem;
-    /* border: 1px solid #fff; */
 }
 .photo-container img{
     border-radius: 10px;
@@ -44,7 +34,6 @@ h1{
     margin-top: 0.8rem;
 }
 .text-container p:first-child{
-    /* border: 1px solid #fff; */
     padding-bottom: 0;
     margin-bottom: 0;
     color: var(--green);
@@ -54,13 +43,39 @@ h1{
 /* second section */
 #about-me p{
     margin-top: 2vh;
-    line-height: 1.4rem;
+    line-height: 2rem;
     
 }
 #about-me p:last-of-type{
     display: none;
 }
-
+.divider {
+    display: flex;
+    align-items: center;
+    width: 100%; /* width total*/
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    
+}
+.text {
+    color: #a0a0a0;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 0 20px; /* space between text and lines*/
+    white-space: nowrap;
+}
+.line {
+    flex: 1;
+    height: 1px;
+}
+/* left fade */
+.line:first-child {
+    background: linear-gradient(to right, transparent, #ffffff);
+}
+/* right fade */
+.line:last-child {
+    background: linear-gradient(to left, transparent, #ffffff);
+}
 .stack{
     margin-top: 6vh;
     display: flex;
@@ -138,6 +153,8 @@ h1{
 .card-content p{
     margin-top: 10px;
     font-size: 1rem;
+    font-family: "Ubuntu";
+
 }
 .proyect-container img{
     border-radius: 20px;
@@ -146,6 +163,8 @@ h1{
 
 /* fourth section */
 form{
+    width: 80vw;
+    height: auto;
     margin-top: 5vh;
     padding: 10vh 10vw;
     border: 1px solid var(--pale-green);
@@ -193,49 +212,6 @@ form button{
 }
 
 
-/* footer's styles */
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    color: var(--text-color);
-
-}
-
-
-.divider {
-    display: flex;
-    align-items: center;
-    width: 100%; /* Ajusta el ancho total */
-    margin-top: 10vh;
-    margin-bottom: 5vh;
-    
-}
-.text {
-    color: #a0a0a0;
-    font-family: sans-serif;
-    font-size: 14px;
-    padding: 0 20px; /* Espacio entre el texto y las líneas */
-    white-space: nowrap;
-}
-
-.line {
-    flex: 1; /* Hace que las líneas ocupen todo el espacio disponible */
-    height: 1px;
-}
-
-/* Línea izquierda: se desvanece de izquierda a derecha */
-.line:first-child {
-    background: linear-gradient(to right, transparent, #ffffff);
-}
-
-/* Línea derecha: se desvanece de derecha a izquierda */
-.line:last-child {
-    background: linear-gradient(to left, transparent, #ffffff);
-}
 /* Tablets */
 @media (min-width: 768px) {
     /* first section */
@@ -250,6 +226,10 @@ footer {
     }
     .photo-container{
         max-width: 35vw;
+    }
+    form{
+        width: 60vw;
+        height: auto;
     }
 
 }
@@ -274,18 +254,11 @@ footer {
     /* fourth section */
     form{
     margin: 5vh 15vw;
-
     }
 }
 
-/* Escritorios grandes  */
+/* high Desktops  */
 @media (min-width: 1200px) {
-    /* section{
-    margin: 20vh 0;
-    }
-    #welcome{
-        margin-top: 8vh;
-    } */
     h2{
         font-size: 2.7rem;
     }
@@ -299,17 +272,35 @@ footer {
     .text-container p:first-of-type{
         font-size: 1.5rem;
     }
-
     .text-container p:last-of-type{
         font-size: 2rem;
     }
 
     /* second section */
+    #about-me p{
+        font-size: 1.3rem;
+    }
+    .stack div{
+        width: 5rem;
+    }
 
+    /* Third section */
+    #proyects{
+        margin: 20vh 0;
+    }
+    #proyects h2{
+        font-size: 2.7rem;
+    }
+
+    /* fourth section */
+    form{
+        width: 40vw;
+        height: auto;
+        margin: 5vh 20vw;
+    }
+
+    footer p{
+    font-size: 0.8rem;
+
+    }
 }
-
-/* .bi{
-    border: 1px solid #ffffff;
-    fill: #0ae98a;
-
-} */
